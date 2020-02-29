@@ -3,7 +3,7 @@ $fileName = $Args[1];
 $backupDirectory = $Args[2];
 
 $filePath = -join($directory, "\", $fileName);
-$archiveFilePath = -join($filePath, "_$(get-date -f yyyy-MM-dd).zip");
+$archiveFilePath = -join($filePath, "_$(get-date -f yyyy-MM-dd).7z");
 
 # Delete the existing backup. Get's all items with this name
 get-childitem -path $backupDirectory -filter *$fileName* | remove-item
